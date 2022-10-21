@@ -1,13 +1,25 @@
-public class ClassProductList {
+import java.util.ArrayList;
+import java.util.Iterator;
 
-	private ProductIterator productIterator;
+@SuppressWarnings("rawtypes")
+public class ProductList extends Reminder {
 
-	private Product[] product;
+	ArrayList<String> sol = new ArrayList<>();
 
-	private ReminderVisitor reminderVisitor;
+	ProductList() {
+		sol.add("Product for tutu");
+		sol.add("Product for mimi");
+		sol.add("Product for pepe");
+	}
 
-	public void accept(visitor : nodeVisitor)() {
 
+	public Iterator createIterator() {
+		return this.sol.iterator();
+	}
+
+	public Reminder accept(NodeVisitor nodeVisitor) {
+		System.out.println("Product List Reminder ...");
+		return nodeVisitor.visitProduct(this);
 	}
 
 }
