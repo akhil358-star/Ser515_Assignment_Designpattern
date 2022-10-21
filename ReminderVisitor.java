@@ -1,18 +1,22 @@
-public class ReminderVisitor extends __abstract__                                           NodeVisitor {
+public class ReminderVisitor extends NodeVisitor {
+	String m_Reminder;
 
-	private Reminder m_Reminder;
-
-	private int attribute10;
-
-	public void visitProduct(product : Product)() {
-
-	}
-
-	public void visitTrading(trading : Trading) : void() {
+	@Override
+	public void visitFAcade(PtbsFacade PF) {
+		System.out.println("visiting Facade ....");
 
 	}
 
-	public void visitFacade(facade : Facade)() {
+	@Override
+	public Reminder visitTrading(Trading T) {
+		System.out.println("visiting Trading ....");
+		return A;
+	}
+
+	@Override
+	public Reminder visitProduct(ProductList PL) {
+		System.out.println("visiting Product ....");
+		return CL;
 
 	}
 
