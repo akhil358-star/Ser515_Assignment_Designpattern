@@ -1,9 +1,18 @@
+import java.util.ArrayList;
+import java.util.Iterator;
 public class OfferingList {
 
-	private Offering[] offering;
+	ArrayList<String> sol = new ArrayList<>();
 
-	private OfferingIterator offeringIterator;
+	OfferingList() {
+		sol.add("Offering for tutu");
+		sol.add("Offering for mimi");
+		sol.add("Offering for pepe");
 
-	private Trading trading;
+	}
 
+	@SuppressWarnings("rawtypes")
+	public Iterator createIterator() {
+		return this.sol.iterator();
+	}
 }
