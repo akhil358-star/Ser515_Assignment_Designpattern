@@ -16,7 +16,7 @@ public class OfferingIterator extends OfferingList {
 	@SuppressWarnings("rawtypes")
 	@Override
 	public String Next(Iterator iterator) {
-		if (this.HasNext(iterator)) {
+		if(this.HasNext(iterator)) {
 			return (String) iterator.next();
 		} else {
 			return null;
