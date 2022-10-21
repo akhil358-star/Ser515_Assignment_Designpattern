@@ -1,27 +1,28 @@
-public class ProductMenu                {
+public abstract class ProductMenu {
+	public abstract void ShowMenu();
 
-	public void <<abstract>> showMenu() {
+	public abstract void ShowAddButtons();
 
+	public abstract void ShowViewButtons();
+
+	public abstract void ShowRadios();
+
+	public abstract void showComboxes();
+
+	public abstract void ShowLabels();
+
+	public abstract void selectProduct(int UserType);
+
+	public void createProductList() {
+		System.out.println("Product List created ...");
 	}
 
-	public void <<abstract>> showAddButton() {
-
+	public void AttachProductToUser() {
+		System.out.println("User Attached .... ");
 	}
 
-	public void <<abstract>> showViewButton() {
-
-	}
-
-	public void <<abstract>> showRadioButton() {
-
-	}
-
-	public void <<abstract>> showLabels() {
-
-	}
-
-	public void <<abstract>> showComboxes() {
-
+	public void ProductOperation() {
+		System.out.println("Operation performed on the Product...");
 	}
 
 }
