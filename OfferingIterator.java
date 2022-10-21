@@ -1,20 +1,34 @@
-public class OfferingIterator {
+import java.util.Iterator;
 
-	private OfferingList offeringList;
-
-	public boolean hasNext() {
-
+public class OfferingIterator extends OfferingList {
+	@SuppressWarnings("rawtypes")
+	@Override
+	public boolean HasNext(Iterator iterator) {
+		return iterator.hasNext();
 	}
 
-	public Offering Next() {
-
+	@SuppressWarnings("rawtypes")
+	@Override
+	public void MoveToHead(Iterator iterator) {
+		System.out.println("Head Moved ");
 	}
 
-	public void MoveToHead() {
-
+	@SuppressWarnings("rawtypes")
+	@Override
+	public String Next(Iterator iterator) {
+		if (this.HasNext(iterator)) {
+			return (String) iterator.next();
+		} else {
+			return null;
+		}
 	}
 
-	public void Remove() {
+	@SuppressWarnings("rawtypes")
+	@Override
+	public void Remove(Iterator iterator) {
+		if (this.HasNext(iterator)) {
+			iterator.next();
+		}
 
 	}
 
