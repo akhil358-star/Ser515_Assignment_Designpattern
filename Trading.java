@@ -1,7 +1,8 @@
-public class Trading {
+public class  Trading extends Reminder{
 
-	public void accept(visitor : nodeVisitor)() {
+	public Reminder accept(NodeVisitor visitor) {
+		System.out.println("Trading Reminder ...");
+		return nodeVisitor.visitTrading(this);
 
 	}
-
 }
